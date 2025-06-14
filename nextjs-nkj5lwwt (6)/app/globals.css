@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kursor crosshair untuk seluruh halaman */
+html, body {
+  cursor: crosshair !important;
+}
+
+/* Kursor pointer untuk elemen interaktif */
+a, button, input[type="submit"], [role='button'] {
+  cursor: pointer !important;
+}
+
+/* Overlay intro dan semua turunannya tetap crosshair, kecuali elemen interaktif */
+.intro-overlay, .intro-overlay * {
+  cursor: crosshair !important;
+}
+.intro-overlay a,
+.intro-overlay button,
+.intro-overlay input[type="submit"],
+.intro-overlay [role='button'] {
+  cursor: pointer !important;
+}
+
+@layer utilities {
+  .text-justify {
+    text-align: justify;
+  }
+}
